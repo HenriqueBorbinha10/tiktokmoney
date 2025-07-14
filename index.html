@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TIKTOK MONEY</title>
   <style>
     body {
@@ -26,11 +26,9 @@
       position: relative;
     }
     .active { display: block; }
-
     .tik-logo { width: 60px; margin-bottom: 5px; }
     .app-icon { font-weight: bold; font-size: 20px; color: #333; margin-bottom: 15px; }
     .app-icon span { font-size: 24px; margin-right: 8px; color: #00FF23; }
-
     .header {
       position: absolute;
       top: 15px;
@@ -38,7 +36,6 @@
       display: flex;
       align-items: center;
     }
-
     .back-arrow {
       font-size: 20px;
       cursor: pointer;
@@ -52,7 +49,6 @@
       color: black;
       cursor: pointer;
     }
-
     input {
       width: 100%;
       padding: 12px;
@@ -61,7 +57,6 @@
       border-radius: 8px;
       font-size: 14px;
     }
-
     .btn {
       width: 100%;
       background-color: #00FF23;
@@ -75,53 +70,20 @@
       margin-top: 20px;
       font-size: 16px;
     }
-
-    .link-card {
-      background: #1f1f2e;
-      color: white;
-      padding: 20px;
-      border-radius: 15px;
-      text-align: left;
-      margin: 20px 0;
-      font-size: 14px;
-    }
-
-    .link-card strong {
-      color: #FFD700;
-    }
-
-    .link-card ul {
-      padding-left: 20px;
-      margin: 10px 0;
-    }
-
-    .link-card li {
-      margin-bottom: 20px;
-      list-style: none;
-    }
-
-    .link-card li::before {
-      content: "✔️ ";
-      color: #00FF23;
-    }
-
     .accelerator-section {
       margin-top: 30px;
       text-align: center;
     }
-
     .accelerator-section img {
       width: 120px;
       border-radius: 10px;
       margin-bottom: 10px;
     }
-
     .accelerator-section h3 {
       font-size: 18px;
       font-weight: bold;
       margin: 10px 0;
     }
-
     .accelerator-section p {
       font-size: 14px;
       color: #333;
@@ -155,12 +117,8 @@
   </div>
   <div class="app-icon"><span>💸</span> TIKTOK MONEY</div>
 
-  <button class="btn" onclick="window.open('https://drive.google.com/file/d/1WFTHym0QUaxledZ_KXvKBKBkHWYunlYT/view?usp=sharing', '_blank')">
-    CLIQUE AQUI E COMEÇE AGORA
-  </button>
-
   <div class="accelerator-section">
-    <img src="https://img.freepik.com/vetores-premium/slogan-milionario-com-ilustracao-vetorial-de-dinheiro-voador-em-fundo-preto_241806-932.jpg" alt="Método Milionaire" />
+    <img src="https://img.freepik.com/vetores-premium/slogan-milionario-com-ilustracao-vetorial-de-dinheiro-voador-em-fundo-preto_241806-932.jpg" alt="Método Milionaire">
     <h3>ACELERADOR DE RESULTADOS</h3>
     <p>
       Acelere seus resultados ainda mais com o nosso <strong>Método Milionaire</strong>, tenha vídeos prontos já viralizados apenas para você subir em seu TikTok.
@@ -168,41 +126,12 @@
   </div>
 </div>
 
-<!-- Etapa 3 -->
-<div id="step3" class="step">
-  <div class="header" onclick="nextStep(2)">
-    <div class="back-arrow">⬅️</div>
-    <div class="back-text">VOLTAR</div>
-  </div>
-  <div class="app-icon"><span>🛒</span> LINKS DOS PRODUTOS</div>
-  <div class="link-card">
-    <strong>PRODUTOS PARA AFILIAÇÃO 💚</strong>
-    <ul id="links-list"></ul>
-  </div>
-</div>
-
-<!-- Etapa 4 -->
-<div id="step4" class="step">
-  <div class="header" onclick="nextStep(2)">
-    <div class="back-arrow">⬅️</div>
-    <div class="back-text">VOLTAR</div>
-  </div>
-  <div class="app-icon"><span>🎥</span> VIDEOS VIRAIS</div>
-  <div class="link-card">
-    <strong>LISTA DE VÍDEOS 📹</strong>
-    <ul id="videos-list"></ul>
-  </div>
-</div>
-
 <script>
-  function nextStep(stepNumber) {
-    document.querySelectorAll(".step").forEach((el) => el.classList.remove("active"));
-    document.getElementById(`step${stepNumber}`).classList.add("active");
+  function nextStep(step) {
+    document.querySelectorAll(".step").forEach(el => el.classList.remove('active'));
+    document.getElementById('step' + step).classList.add('active');
   }
+</script>
 
-  // Produtos
-  const productLinks = [
-    "https://s.shopee.com.br/4pufZKIQ8W", "https://s.shopee.com.br/6fMJkn4TqM", "https://s.shopee.com.br/3VPHz2Ev5P", "https://s.shopee.com.br/pPof4hML",
-    "https://s.shopee.com.br/3q28Nsq88S", "https://s.shopee.com.br/3L5rnMqjb7", "https://s.shopee.com.br/5pnCldbxY0", "https://s.shopee.com.br/6fMJlbssuW",
-    "https://s.shopee.com.br/6zzAALfW3D", "https://s.shopee.com.br/10hx1NEHAm", "https://s.shopee.com.br/A9w7UFaUmO", "https://s.shopee.com.br/2LDKbxfItd",
-    "https://s.shopee.com.br
+</body>
+</html>
