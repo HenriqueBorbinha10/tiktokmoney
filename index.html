@@ -26,9 +26,6 @@
       position: relative;
     }
     .active { display: block; }
-    .tik-logo { width: 60px; margin-bottom: 5px; }
-    .app-icon { font-weight: bold; font-size: 20px; color: #333; margin-bottom: 15px; }
-    .app-icon span { font-size: 24px; margin-right: 8px; color: #00FF23; }
     .header {
       position: absolute;
       top: 15px;
@@ -49,26 +46,23 @@
       color: black;
       cursor: pointer;
     }
-    input {
-      width: 100%;
-      padding: 12px;
-      margin: 10px 0;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      font-size: 14px;
-    }
+    .app-icon { font-weight: bold; font-size: 20px; color: #333; margin-bottom: 15px; }
     .btn {
-      width: 100%;
       background-color: #00FF23;
       color: white;
-      padding: 15px;
+      padding: 12px 20px;
       border: none;
       border-radius: 8px;
       font-weight: bold;
       text-transform: uppercase;
       cursor: pointer;
+      margin-top: 15px;
+      display: inline-block;
+      text-decoration: none;
+    }
+    .btn-red {
+      background-color: red;
       margin-top: 20px;
-      font-size: 16px;
     }
     .accelerator-section {
       margin-top: 30px;
@@ -93,29 +87,15 @@
 </head>
 <body>
 
-<!-- Etapa 1 -->
-<div id="step1" class="step active">
-  <img class="tik-logo" src="https://pngimg.com/uploads/tiktok/tiktok_PNG14.png" alt="TikTok Logo" />
-  <div class="app-icon"><span>💸</span> TIKTOK MONEY</div>
-  <h3>SEJA BEM VINDO AO TIK TOK MONEY</h3>
-  <p>Insira seus dados para começar</p>
-
-  <div style="text-align: left; font-weight: bold;">Seu nome:</div>
-  <input type="text" placeholder="Ex: João Mussa" id="nome" required />
-
-  <div style="text-align: left; font-weight: bold;">Seu telefone:</div>
-  <input type="tel" placeholder="Ex: 84123456" id="telefone" required oninput="this.value=this.value.replace(/[^0-9]/g,'')" />
-
-  <button class="btn" onclick="nextStep(2)">CONTINUAR</button>
-</div>
-
 <!-- Etapa 2 -->
-<div id="step2" class="step">
+<div id="step2" class="step active">
   <div class="header" onclick="nextStep(1)">
     <div class="back-arrow">⬅️</div>
     <div class="back-text">VOLTAR</div>
   </div>
   <div class="app-icon"><span>💸</span> TIKTOK MONEY</div>
+
+  <a class="btn" href="https://drive.google.com/file/d/1WFTHym0QUaxledZ_KXvKBKBkHWYunlYT/view?usp=sharing" target="_blank">CLIQUE AQUI PARA ACESSAR</a>
 
   <div class="accelerator-section">
     <img src="https://img.freepik.com/vetores-premium/slogan-milionario-com-ilustracao-vetorial-de-dinheiro-voador-em-fundo-preto_241806-932.jpg" alt="Método Milionaire">
@@ -124,6 +104,8 @@
       Acelere seus resultados ainda mais com o nosso <strong>Método Milionaire</strong>, tenha vídeos prontos já viralizados apenas para você subir em seu TikTok.
     </p>
   </div>
+
+  <a class="btn btn-red" href="#">ACESSAR ACELERADOR</a>
 </div>
 
 <script>
