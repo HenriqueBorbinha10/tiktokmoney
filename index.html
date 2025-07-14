@@ -1,51 +1,185 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TikTok Money</title>
-    <style>
-        body { font-family: Arial, sans-serif; background-color: #eef3fc; margin: 0; padding: 0; }
-        .step { max-width: 500px; margin: 50px auto; background: white; border-radius: 15px; padding: 30px 30px 10px 30px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); text-align: center; }
-        input, button, a { display: block; width: 100%; margin: 10px 0; padding: 10px; border-radius: 5px; border: 1px solid #ccc; font-size: 14px; }
-        button, .btn-green, .btn-red { cursor: pointer; text-decoration: none; text-align: center; font-weight: bold; text-transform: uppercase; }
-        .btn-green { background: #00FF23; color: white; }
-        .btn-red { background: red; color: white; width: auto; display: inline-block; margin-top: 12px; margin-bottom: 0; padding: 10px 18px; }
-        .logo { max-width: 300px; margin: 20px 0; }
-        .description { font-size: 14px; line-height: 1.5; margin-bottom: 10px; }
-        .hidden { display: none; }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TikTok Money</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #eef3fc;
+      margin: 0;
+      padding: 0;
+    }
+
+    .step {
+      max-width: 500px;
+      margin: 50px auto;
+      background: white;
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .logo {
+      max-width: 80px;
+      margin: 0 auto 10px;
+      display: block;
+    }
+
+    h2 {
+      font-size: 20px;
+      margin: 10px 0 5px;
+      color: #222;
+    }
+
+    h3 {
+      margin: 0 0 20px;
+      font-size: 16px;
+      color: #333;
+      font-weight: normal;
+    }
+
+    label {
+      text-align: left;
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      margin-top: 5px;
+      font-size: 14px;
+      box-sizing: border-box;
+    }
+
+    .btn-green {
+      background: #00ff23;
+      color: white;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 16px;
+      border: none;
+      padding: 12px;
+      margin-top: 25px;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      display: block;
+    }
+
+    .btn-red {
+      background-color: red;
+      color: white;
+      font-weight: bold;
+      border-radius: 8px;
+      padding: 12px 20px;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .header-step2 {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+
+    .header-step2 .center {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .header-step2 img.icon {
+      width: 22px;
+    }
+
+    .header-step2 button {
+      display: flex;
+      align-items: center;
+      background: none;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .header-step2 button img {
+      width: 18px;
+      margin-right: 5px;
+    }
+  </style>
 </head>
 <body>
 
-<div id="step1" class="step">
+  <!-- Etapa 1 -->
+  <div id="step1" class="step">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/TikTok_logo.svg/512px-TikTok_logo.svg.png" alt="TikTok Logo" class="logo">
     <h2>💸 TIKTOK MONEY</h2>
-    <label>Seu nome:</label>
+    <h3>SEJA BEM VINDO AO TIK TOK MONEY</h3>
+    <p>Insira seus dados para começar</p>
+
+    <label for="nome">Seu nome:</label>
     <input type="text" id="nome" placeholder="Ex: João Mussa">
-    <label>Seu telefone:</label>
+
+    <label for="telefone">Seu telefone:</label>
     <input type="number" id="telefone" placeholder="Ex: 84123456">
-    <button class="btn-green" onclick="goToStep(2)">Continuar</button>
-</div>
 
-<div id="step2" class="step hidden">
-    <button onclick="goToStep(1)">🔙 VOLTAR</button>
-    <h2>💸 TIKTOK MONEY</h2>
-    <a href="https://drive.google.com/file/d/1WFTHym0QUaxledZ_KXvKBKBkHWYunlYT/view?usp=sharing" class="btn-green">CLIQUE AQUI PARA ACESSAR SUA COMPRA</a>
+    <button class="btn-green" onclick="goToStep(2)">CONTINUAR</button>
+  </div>
 
-    <img src="https://img.freepik.com/vetores-premium/slogan-milionario-com-ilustracao-vetorial-de-dinheiro-voador-em-fundo-preto_241806-932.jpg" alt="Método Milionaire" class="logo">
+  <!-- Etapa 2 -->
+  <div id="step2" class="step hidden">
+    <div class="header-step2">
+      <button onclick="goToStep(1)">
+        <img src="https://cdn-icons-png.flaticon.com/512/109/109618.png" alt="Voltar">
+        VOLTAR
+      </button>
+      <div class="center">
+        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Money Logo" class="icon">
+        <strong style="font-size: 16px;">TIKTOK MONEY</strong>
+      </div>
+      <div style="width: 60px;"></div>
+    </div>
 
-    <h3>ACELERADOR DE RESULTADOS</h3>
-    <p class="description">Acelere seus resultados ainda mais com o nosso <strong>Método Milionaire</strong>, tenha vídeos prontos já viralziados com milhares de visualizações para subir em seu TIKTOK e monetizar. São vídeos printos, você precisa apenas apertar um botão.</p>
+    <a href="https://drive.google.com/file/d/1WFTHym0QUaxledZ_KXvKBKBkHWYunlYT/view?usp=sharing" class="btn-green">
+      CLIQUE AQUI PARA ACESSAR SUA COMPRA
+    </a>
 
-    <a href="https://www.trucdesel.online/tiktokmoneyckup/" class="btn-red">ACESSAR ACELERADOR POR 297 MT</a>
-</div>
+    <div style="margin-top: 60px;">
+      <img src="https://img.freepik.com/vetores-premium/slogan-milionario-com-ilustracao-vetorial-de-dinheiro-voador-em-fundo-preto_241806-932.jpg" alt="Método Milionaire" style="margin-bottom: 20px; max-width: 100%; height: auto;">
 
-<script>
+      <h3 style="font-size: 18px; font-weight: bold; margin-bottom: 10px;">ACELERADOR DE RESULTADOS</h3>
+
+      <p style="font-size: 14px; line-height: 1.6; margin-bottom: 25px; text-align: justify;">
+        Acelere seus resultados ainda mais com o nosso <strong>Método Milionaire</strong>, tenha vídeos prontos já viralizados com milhares de visualizações para subir em seu TIKTOK e monetizar. São vídeos prontos, você precisa apenas apertar um botão.
+      </p>
+
+      <a href="https://www.trucdesel.online/tiktokmoneyckup/" class="btn-red">
+        ACESSAR ACELERADOR POR 297 MT
+      </a>
+    </div>
+  </div>
+
+  <script>
     function goToStep(step) {
-        document.querySelectorAll('.step').forEach(div => div.classList.add('hidden'));
-        document.getElementById('step' + step).classList.remove('hidden');
+      document.querySelectorAll('.step').forEach(div => div.classList.add('hidden'));
+      document.getElementById('step' + step).classList.remove('hidden');
     }
-</script>
+  </script>
 
 </body>
 </html>
