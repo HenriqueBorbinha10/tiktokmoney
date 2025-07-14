@@ -1,134 +1,50 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TIKTOK MONEY</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(to bottom, #f0f4ff, #e6eeff);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-    }
-    .step {
-      display: none;
-      background: white;
-      border-radius: 20px;
-      padding: 30px;
-      max-width: 500px;
-      width: 90%;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-      text-align: center;
-      position: relative;
-    }
-    .active { display: block; }
-    .header {
-      position: absolute;
-      top: 15px;
-      left: 20px;
-      display: flex;
-      align-items: center;
-    }
-    .back-arrow {
-      font-size: 20px;
-      cursor: pointer;
-      margin-right: 8px;
-      color: black;
-    }
-    .back-text {
-      font-size: 14px;
-      font-weight: bold;
-      text-transform: uppercase;
-      color: black;
-      cursor: pointer;
-    }
-    .app-icon {
-      font-weight: bold;
-      font-size: 20px;
-      color: #333;
-      margin-bottom: 10px;
-    }
-    .btn {
-      background-color: #00FF23;
-      color: white;
-      padding: 18px 28px;
-      border: none;
-      border-radius: 8px;
-      font-weight: bold;
-      text-transform: uppercase;
-      cursor: pointer;
-      display: inline-block;
-      text-decoration: none;
-      font-size: 18px;
-      margin-bottom: 35px;
-    }
-    .btn-red {
-      background-color: red;
-      font-size: 14px;
-      padding: 10px 18px;
-      margin-top: 12px;
-      text-decoration: none;
-      color: white;
-      border-radius: 8px;
-      display: inline-block;
-    }
-    .accelerator-section {
-      text-align: center;
-    }
-    .accelerator-section img {
-      width: 240px;
-      border-radius: 10px;
-      margin: 0 0 10px 0;
-    }
-    .accelerator-section h3 {
-      font-size: 18px;
-      font-weight: bold;
-      margin: 10px 0;
-    }
-    .accelerator-section p {
-      font-size: 14px;
-      color: #333;
-      line-height: 1.4;
-      margin-bottom: 10px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TikTok Money</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #eef3fc; margin: 0; padding: 0; }
+        .step { max-width: 500px; margin: 50px auto; background: white; border-radius: 15px; padding: 30px 30px 10px 30px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); text-align: center; }
+        input, button, a { display: block; width: 100%; margin: 10px 0; padding: 10px; border-radius: 5px; border: 1px solid #ccc; font-size: 14px; }
+        button, .btn-green, .btn-red { cursor: pointer; text-decoration: none; text-align: center; font-weight: bold; text-transform: uppercase; }
+        .btn-green { background: #00FF23; color: white; }
+        .btn-red { background: red; color: white; width: auto; display: inline-block; margin-top: 12px; margin-bottom: 0; padding: 10px 18px; }
+        .logo { max-width: 300px; margin: 20px 0; }
+        .description { font-size: 14px; line-height: 1.5; margin-bottom: 10px; }
+        .hidden { display: none; }
+    </style>
 </head>
 <body>
 
-<!-- Etapa 2 -->
-<div id="step2" class="step active">
-  <div class="header" onclick="nextStep(1)">
-    <div class="back-arrow">⬅️</div>
-    <div class="back-text">VOLTAR</div>
-  </div>
-  <div class="app-icon"><span>💸</span> TIKTOK MONEY</div>
+<div id="step1" class="step">
+    <h2>💸 TIKTOK MONEY</h2>
+    <label>Seu nome:</label>
+    <input type="text" id="nome" placeholder="Ex: João Mussa">
+    <label>Seu telefone:</label>
+    <input type="number" id="telefone" placeholder="Ex: 84123456">
+    <button class="btn-green" onclick="goToStep(2)">Continuar</button>
+</div>
 
-  <a class="btn" href="https://drive.google.com/file/d/1WFTHym0QUaxledZ_KXvKBKBkHWYunlYT/view?usp=sharing" target="_blank">
-    CLIQUE AQUI PARA ACESSAR SUA COMPRA
-  </a>
+<div id="step2" class="step hidden">
+    <button onclick="goToStep(1)">🔙 VOLTAR</button>
+    <h2>💸 TIKTOK MONEY</h2>
+    <a href="https://drive.google.com/file/d/1WFTHym0QUaxledZ_KXvKBKBkHWYunlYT/view?usp=sharing" class="btn-green">CLIQUE AQUI PARA ACESSAR SUA COMPRA</a>
 
-  <div class="accelerator-section">
-    <img src="https://img.freepik.com/vetores-premium/slogan-milionario-com-ilustracao-vetorial-de-dinheiro-voador-em-fundo-preto_241806-932.jpg" alt="Método Milionaire">
+    <img src="https://img.freepik.com/vetores-premium/slogan-milionario-com-ilustracao-vetorial-de-dinheiro-voador-em-fundo-preto_241806-932.jpg" alt="Método Milionaire" class="logo">
+
     <h3>ACELERADOR DE RESULTADOS</h3>
-    <p>
-      Acelere seus resultados ainda mais com o nosso <strong>Método Milionaire</strong>, tenha vídeos prontos já viralziados com milhares de visualizações para subir em seu TIKTOK e monetizar. São vídeos printos, você precisa apenas apertar um botão.
-    </p>
-  </div>
+    <p class="description">Acelere seus resultados ainda mais com o nosso <strong>Método Milionaire</strong>, tenha vídeos prontos já viralziados com milhares de visualizações para subir em seu TIKTOK e monetizar. São vídeos printos, você precisa apenas apertar um botão.</p>
 
-  <a class="btn btn-red" href="https://www.trucdesel.online/tiktokmoneyckup/" target="_blank">
-    ACESSAR ACELERADOR POR 297 MT
-  </a>
+    <a href="https://www.trucdesel.online/tiktokmoneyckup/" class="btn-red">ACESSAR ACELERADOR POR 297 MT</a>
 </div>
 
 <script>
-  function nextStep(step) {
-    document.querySelectorAll(".step").forEach(el => el.classList.remove('active'));
-    document.getElementById('step' + step).classList.add('active');
-  }
+    function goToStep(step) {
+        document.querySelectorAll('.step').forEach(div => div.classList.add('hidden'));
+        document.getElementById('step' + step).classList.remove('hidden');
+    }
 </script>
 
 </body>
