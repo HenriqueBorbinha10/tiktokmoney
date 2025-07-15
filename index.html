@@ -1,188 +1,160 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>TikTok Money</title>
-  <style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TikTok Money</title>
+<style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #eef3fc;
-      margin: 0;
-      padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: #eef2f7;
+        margin: 0;
+        padding: 0;
     }
-
-    .step {
-      max-width: 500px;
-      margin: 50px auto;
-      background: white;
-      border-radius: 20px;
-      padding: 30px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-      text-align: center;
+    .container {
+        max-width: 400px;
+        margin: 30px auto;
+        background: #fff;
+        border-radius: 10px;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        position: relative;
     }
-
-    .logo {
-      max-width: 80px;
-      margin: 0 auto 10px;
-      display: block;
+    h1, h2, h3 {
+        margin: 10px 0;
     }
-
-    h2 {
-      font-size: 20px;
-      margin: 10px 0 5px;
-      color: #222;
+    .input-group {
+        margin: 15px 0;
+        text-align: left;
     }
-
-    h3 {
-      margin: 0 0 20px;
-      font-size: 16px;
-      color: #333;
-      font-weight: normal;
+    .input-group label {
+        font-weight: bold;
     }
-
-    label {
-      text-align: left;
-      display: block;
-      margin-top: 15px;
-      font-weight: bold;
+    .input-group input {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
     }
-
-    input {
-      width: 100%;
-      padding: 12px;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-      margin-top: 5px;
-      font-size: 14px;
-      box-sizing: border-box;
+    button {
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
     }
-
-    .btn-green {
-      background: #00ff23;
-      color: white;
-      font-weight: bold;
-      text-transform: uppercase;
-      font-size: 16px;
-      border: none;
-      padding: 12px;
-      margin-top: 25px;
-      border-radius: 8px;
-      cursor: pointer;
-      text-decoration: none;
-      display: block;
-      width: fit-content;
-      margin-left: auto;
-      margin-right: auto;
+    .green {
+        background-color: #00FF23;
+        font-weight: bold;
+        color: white;
+        padding: 12px;
+        width: 100%;
+        margin-top: 10px;
     }
-
-    .btn-red {
-      background-color: red;
-      color: white;
-      font-weight: bold;
-      border-radius: 8px;
-      padding: 12px 20px;
-      text-decoration: none;
-      display: inline-block;
-      margin-top: 10px;
+    .red {
+        background-color: #FF0000;
+        color: white;
+        font-weight: bold;
+        padding: 10px 20px;
+        font-size: 14px;
+        text-transform: uppercase;
+        border-radius: 5px;
+        display: block;
+        margin: 20px auto;
+        width: auto;
     }
-
-    .hidden {
-      display: none;
+    .back-btn {
+        display: flex;
+        align-items: center;
+        background-color: #4A90E2;
+        color: white;
+        font-weight: bold;
+        padding: 8px 14px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 14px;
+        margin-bottom: 20px;
+        margin-left: 0;
+        align-self: flex-start;
     }
-
-    .header-step2 {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 20px;
+    .back-btn img {
+        width: 16px;
+        height: 16px;
+        margin-right: 8px;
+        filter: invert(1);
     }
-
-    .header-step2 .center {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .header-step2 img.icon {
-      width: 22px;
-    }
-
-    .header-step2 button {
-      display: flex;
-      align-items: center;
-      background: none;
-      border: none;
-      font-weight: bold;
-      cursor: pointer;
-      font-size: 14px;
-    }
-
-    .header-step2 button img {
-      width: 18px;
-      margin-right: 5px;
-    }
-  </style>
+    .hidden { display: none; }
+    p.justify { text-align: justify; }
+</style>
 </head>
 <body>
 
-  <!-- Etapa 1 -->
-  <div id="step1" class="step">
-    <img src="https://pngimg.com/uploads/tiktok/tiktok_PNG14.png" alt="TikTok Logo" class="logo">
+<!-- ETAPA 1 -->
+<div class="container" id="step1">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoK5bZR4NJLyUSmKjo9rAOSvkOlaIemh0MKA&s" alt="TikTok Logo" width="70">
     <h2>💸 TIKTOK MONEY</h2>
     <h3>SEJA BEM VINDO AO TIK TOK MONEY</h3>
     <p>Insira seus dados para começar</p>
 
-    <label for="nome">Seu nome:</label>
-    <input type="text" id="nome" placeholder="Ex: João Mussa">
-
-    <label for="telefone">Seu telefone:</label>
-    <input type="number" id="telefone" placeholder="Ex: 84123456">
-
-    <button class="btn-green" onclick="goToStep(2)">CONTINUAR</button>
-  </div>
-
-  <!-- Etapa 2 -->
-  <div id="step2" class="step hidden">
-    <div class="header-step2">
-      <button onclick="goToStep(1)">
-        <img src="https://cdn-icons-png.flaticon.com/512/271/271220.png" alt="Voltar">
-        VOLTAR
-      </button>
-      <div class="center">
-        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Money Logo" class="icon">
-        <strong style="font-size: 16px;">TIKTOK MONEY 💸</strong>
-      </div>
-      <div style="width: 60px;"></div>
+    <div class="input-group">
+        <label>Seu nome:</label>
+        <input type="text" placeholder="Ex: João Mussa" id="nome">
+    </div>
+    <div class="input-group">
+        <label>Seu telefone:</label>
+        <input type="tel" placeholder="Ex: 84123456" id="telefone">
     </div>
 
-    <a href="https://drive.google.com/file/d/1WFTHym0QUaxledZ_KXvKBKBkHWYunlYT/view?usp=sharing" class="btn-green">
-      CLIQUE AQUI PARA ACESSAR SUA COMPRA
-    </a>
+    <button class="green" onclick="nextStep(2)">CONTINUAR</button>
+</div>
 
-    <div style="margin-top: 60px;">
-      <img src="https://img.freepik.com/vetores-premium/slogan-milionario-com-ilustracao-vetorial-de-dinheiro-voador-em-fundo-preto_241806-932.jpg" alt="Método Milionaire" style="margin-bottom: 20px; max-width: 100%; height: auto;">
-
-      <h3 style="font-size: 18px; font-weight: bold; margin-bottom: 10px;">ACELERADOR DE RESULTADOS</h3>
-
-      <p style="font-size: 14px; line-height: 1.6; margin-bottom: 25px; text-align: justify;">
-        Acelere seus resultados ainda mais com o nosso <strong>Método Milionaire</strong>, tenha vídeos prontos já viralizados com milhares de visualizações para subir em seu TIKTOK e monetizar. São vídeos prontos, você precisa apenas apertar um botão.
-      </p>
-
-      <a href="https://www.trucdesel.online/tiktokmoneyckup/" class="btn-red">
-        ACESSAR ACELERADOR POR 297 MT
-      </a>
+<!-- ETAPA 2 -->
+<div class="container hidden" id="step2">
+    <div style="display: flex;">
+        <button class="back-btn" onclick="nextStep(1)">
+            <img src="https://cdn-icons-png.flaticon.com/512/271/271220.png" alt="Voltar">
+            VOLTAR
+        </button>
     </div>
-  </div>
 
-  <script>
-    function goToStep(step) {
-      document.querySelectorAll('.step').forEach(div => div.classList.add('hidden'));
-      document.getElementById('step' + step).classList.remove('hidden');
-    }
-  </script>
+    <h2>💸 TIKTOK MONEY</h2>
+
+    <button class="green" onclick="nextStep(3)">CLIQUE AQUI PARA ACESSAR SUA COMPRA</button>
+
+    <img src="https://img.freepik.com/vetores-premium/slogan-milionario-com-ilustracao-vetorial-de-dinheiro-voador-em-fundo-preto_241806-932.jpg" alt="Milionaire" style="width:100%; max-width:300px; margin:20px auto; display:block;">
+
+    <h3>ACELERADOR DE RESULTADOS</h3>
+    <p class="justify">Acelere seus resultados ainda mais com o nosso <strong>Método Milionaire</strong>, tenha vídeos prontos já viralizados com milhares de visualizações para subir em seu TIKTOK e monetizar. São vídeos prontos, você precisa apenas apertar um botão.</p>
+
+    <button class="red" onclick="window.location.href='https://www.trucdesel.online/tiktokmoneyckup/'">ACESSAR ACELERADOR POR 297 MT</button>
+</div>
+
+<!-- ETAPA 3 -->
+<div class="container hidden" id="step3">
+    <div style="display: flex;">
+        <button class="back-btn" onclick="nextStep(2)">
+            <img src="https://cdn-icons-png.flaticon.com/512/271/271220.png" alt="Voltar">
+            VOLTAR
+        </button>
+    </div>
+
+    <h2>PARABÉNS PELA SUA COMPRA!</h2>
+    <button class="green" onclick="window.open('https://drive.google.com/file/d/1WFTHym0QUaxledZ_KXvKBKBkHWYunlYT/view?usp=sharing', '_blank')">ACESSE A AULA</button>
+    <button class="green" onclick="window.open('https://vm.tiktok.com/ZMestCNkd/', '_blank')">ACESSE O LINK DO TIKTOK</button>
+</div>
+
+<script>
+function nextStep(step) {
+    document.getElementById('step1').classList.add('hidden');
+    document.getElementById('step2').classList.add('hidden');
+    document.getElementById('step3').classList.add('hidden');
+
+    document.getElementById('step' + step).classList.remove('hidden');
+}
+</script>
 
 </body>
 </html>
