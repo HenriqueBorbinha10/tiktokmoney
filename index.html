@@ -46,7 +46,7 @@
         cursor: pointer;
     }
     .green {
-        background-color: #00FF23;
+        background-color: #00cc1a;
         font-weight: bold;
         color: white;
         padding: 12px;
@@ -124,12 +124,25 @@
 
     <button class="green" onclick="nextStep(3)">CLIQUE AQUI PARA ACESSAR SUA COMPRA</button>
 
-    <img src="https://img.freepik.com/vetores-premium/slogan-milionario-com-ilustracao-vetorial-de-dinheiro-voador-em-fundo-preto_241806-932.jpg" alt="Milionaire" style="width:100%; max-width:450px; margin:20px auto; display:block;">
+    <!-- IMAGEM RESTAURADA -->
+    <img src="https://img.freepik.com/vetores-premium/slogan-milionario-com-ilustracao-vetorial-de-dinheiro-voador-em-fundo-preto_241806-932.jpg" alt="Método Milionaire" style="width:100%; max-width:450px; margin:20px auto; display:block;">
 
     <h3>ACELERADOR DE RESULTADOS</h3>
     <p class="justify">Acelere seus resultados ainda mais com o nosso <strong>Método Milionaire</strong>, tenha vídeos prontos já viralizados com milhares de visualizações para subir em seu TIKTOK e monetizar. São vídeos prontos, você precisa apenas apertar um botão.</p>
 
     <button class="red" onclick="window.location.href='https://www.trucdesel.online/tiktokmoneyckup/'">ACESSAR ACELERADOR POR 297 MT</button>
+
+    <div style="margin: 30px 0;"></div>
+
+    <!-- IMAGEM DO SUPORTE VIP ATUALIZADA -->
+    <img src="https://iili.io/FXNCgII.png" alt="Suporte VIP" style="width:100%; max-width:450px; margin:20px auto; display:block;">
+
+    <h3>SUPORTE VIP PERSONALIZADO</h3>
+    <p class="justify">
+    Imagine ter um suporte VIP disponível 24 horas por dia, especialmente para ti que estás a aprender a ganhar dinheiro com o TikTok. Sempre que tiveres dúvidas ou precisares de orientação, seja de manhã cedo, à noite ou até mesmo aos fins de semana, a nossa equipa está aqui para te ajudar passo a passo. Não vais caminhar sozinho, com este apoio dedicado, vais conseguir aplicar as estratégias certas e aumentar os teus ganhos do dia para a noite. É assim que se constrói sucesso com confiança e resultados reais, mesmo cá em Moçambique.
+    </p>
+
+    <button class="red" onclick="window.location.href='https://www.trucdesel.online/tiktokmoneyckup2/'">ACESSAR SUPORTE VIP POR 497 MT</button>
 </div>
 
 <!-- ETAPA 3 -->
@@ -142,12 +155,22 @@
     </div>
 
     <h2>PARABÉNS PELA SUA COMPRA!</h2>
-    <button class="green" onclick="window.open('https://drive.google.com/file/d/1WFTHym0QUaxledZ_KXvKBKBkHWYunlYT/view?usp=sharing', '_blank')">ACESSE A AULA</button>
-    <button class="green" onclick="window.open('https://vm.tiktok.com/ZMestCNkd/', '_blank')">ACESSE O LINK DO TIKTOK</button>
+    <button class="green" onclick="window.open('https://drive.google.com/file/d/1WFTHym0QUaxledZ_KXvKBKBkHWYunlYT/view?usp=sharing', '_blank', 'noopener,noreferrer')">ACESSE A AULA</button>
+    <button class="green" onclick="window.open('https://vm.tiktok.com/ZMestCNkd/', '_blank', 'noopener,noreferrer')">ACESSE O LINK DO TIKTOK</button>
 </div>
 
 <script>
 function nextStep(step) {
+    if (step === 2) {
+        const nome = document.getElementById('nome').value.trim();
+        const telefone = document.getElementById('telefone').value.trim();
+
+        if (!nome || !telefone) {
+            alert("Por favor, preencha todos os campos.");
+            return;
+        }
+    }
+
     document.getElementById('step1').classList.add('hidden');
     document.getElementById('step2').classList.add('hidden');
     document.getElementById('step3').classList.add('hidden');
